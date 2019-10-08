@@ -13,7 +13,7 @@ BUILD_ARTIFACT="$BUILD_DIR/product-service-0.0.1-SNAPSHOT.zip"
 
 DYNAMODB_TABLE=nfjs-example
 
-API_NAME=nfjs_api
+API_NAME=java_api
 AWS_DEFAULT_REGION=us-east-1
 STAGE=dev
 
