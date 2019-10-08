@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @Import({ProductController.class})
-public class ProductServivce {
+public class ProductService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductServivce.class, args);
+		SpringApplication.run(ProductService.class, args);
 	}
 
 }
