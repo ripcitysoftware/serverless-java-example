@@ -4,12 +4,12 @@ LCMD="aws lambda --endpoint-url=http://localhost:4574"
 DCMD="aws dynamodb --endpoint-url=http://localhost:4569"
 ACMD="aws apigateway --endpoint-url=http://localhost:4567"
 
-BUILD_DIR=build
+BUILD_DIR=build/distributions
 FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
 HANDLER="SteamLambdaHandler.handleRequest"
 RUNTIME="java"
-BUILD_ARTIFACT="$BUILD_DIR/example.zip"
+BUILD_ARTIFACT="$BUILD_DIR/product-service-0.0.1-SNAPSHOT.zip"
 
 DYNAMODB_TABLE=nfjs-example
 
