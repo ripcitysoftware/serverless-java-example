@@ -8,7 +8,7 @@ BUILD_DIR=target
 FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
 
-HANDLER="StreamLambdaHandler.handleRequest"
+HANDLER="com.ripcitysoftware.productservice.StreamLambdaHandler::handleRequest"
 RUNTIME="java8"
 BUILD_ARTIFACT="$BUILD_DIR/java-serverless-0.0.1-SNAPSHOT.jar"
 
