@@ -40,7 +40,7 @@ EOF
 package_code() {
     echo -e "\n\tPackage code!"
 
-    gradle clean build
+    mvn clean package
 }
 
 create_lambda() {
@@ -62,8 +62,6 @@ create_lambda() {
         --function-name ${FUNCTION_NAME} \
         --zip-file fileb://${BUILD_ARTIFACT}
     fi
-
-    exit
 }
 
 create_dynamodb_item() {
@@ -105,7 +103,7 @@ get_lambda_arn() {
 
 print_endpoints() {
     API_ID=$(${ACMD} get-rest-apis | jq -r '.items[0].id')
-    ENDPOINT="http://localhost:4567/restapis/${API_ID}/${STAGE}/_user_request_/employees"
+    ENDPOINT="http://localhost:4567/restapis/${API_ID}/${STAGE}/_user_request_/products"
     echo "API available at:"
     echo "GET ${ENDPOINT}/:uuid"
     echo "POST ${ENDPOINT}"
@@ -124,7 +122,7 @@ print_sam() {
     echo "generate the same EVENT an API Gateway would so you can local invoke the lambda, see $EVENT_FILE"
 
     set -x
-    sam local generate-event apigateway aws-proxy --path employees/$DEFAULT_UUID --method GET > $EVENT_FILE
+    sam local generate-event apigateway aws-proxy --path products/$DEFAULT_UUID --method GET > $EVENT_FILE
 
     $LCMD invoke --function-name $(get_lambda_arn) --payload file://$EVENT_FILE $OUT_FILE
     set +x
