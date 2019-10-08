@@ -5,7 +5,7 @@ DCMD="aws dynamodb --endpoint-url=http://localhost:4569"
 ACMD="aws apigateway --endpoint-url=http://localhost:4567"
 
 BUILD_DIR=build
-FUNCTION_NAME="ExampleLambda"
+FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
 HANDLER="lambda.handler"
 RUNTIME="python3.7"
