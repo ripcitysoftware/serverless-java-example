@@ -7,8 +7,9 @@ ACMD="aws apigateway --endpoint-url=http://localhost:4567"
 BUILD_DIR=build/distributions
 FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
-HANDLER="SteamLambdaHandler.handleRequest"
-RUNTIME="java"
+
+HANDLER="StreamLambdaHandler.handleRequest"
+RUNTIME="java8"
 BUILD_ARTIFACT="$BUILD_DIR/product-service-0.0.1-SNAPSHOT.zip"
 
 DYNAMODB_TABLE=nfjs-example
@@ -62,6 +63,7 @@ create_lambda() {
         --zip-file fileb://${BUILD_ARTIFACT}
     fi
 
+    exit
 }
 
 create_dynamodb_item() {
