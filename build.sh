@@ -111,7 +111,7 @@ print_endpoints() {
 
 test_lambda() {
     set -x
-    curl -Lik http://127.0.0.1:5000/employees/$DEFAULT_UUID
+    curl -Lik http://127.0.0.1:5000/products/$DEFAULT_UUID
     set +x
 }
 
