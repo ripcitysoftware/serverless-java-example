@@ -8,7 +8,7 @@ BUILD_DIR=build
 FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
 HANDLER="SteamLambdaHandler.handleRequest"
-RUNTIME="python3.7"
+RUNTIME="java"
 BUILD_ARTIFACT="$BUILD_DIR/example.zip"
 
 DYNAMODB_TABLE=nfjs-example
