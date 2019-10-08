@@ -7,7 +7,7 @@ ACMD="aws apigateway --endpoint-url=http://localhost:4567"
 BUILD_DIR=build
 FUNCTION_NAME="JavaLambda"
 # lambda - filename: lambda.py, handler is the FUNCTION in the file
-HANDLER="lambda.handler"
+HANDLER="SteamLambdaHandler.handleRequest"
 RUNTIME="python3.7"
 BUILD_ARTIFACT="$BUILD_DIR/example.zip"
 
