@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="cmaki" id="db.create" context="" logicalFilePath="db.create">
+        <sqlFile path="sql/db.create.sql" relativeToChangelogFile="true" stripComments="false"/>
+    </changeSet>
+    <changeSet author="cmaki" id="db.initial-data" context="" logicalFilePath="db.initial-data">
+        <sqlFile path="sql/db.initial-data.sql" relativeToChangelogFile="true" stripComments="false"/>
+    </changeSet>
+<!--    <changeSet author="cmaki" id="product-update" context="" logicalFilePath="product-update">-->
+<!--        <sqlFile path="sql/product-update.sql" relativeToChangelogFile="true" stripComments="false"/>-->
+<!--    </changeSet>-->
+<!--    <changeSet author="cmaki" id="billing" context="" logicalFilePath="billing">-->
+<!--        <sqlFile path="sql/billing.sql" relativeToChangelogFile="true" stripComments="false"/>-->
+<!--    </changeSet>-->
+<!--    <changeSet author="cmaki" id="billing2" context="" logicalFilePath="billing2">-->
+<!--        <sqlFile path="sql/billing2.sql" relativeToChangelogFile="true" stripComments="false"/>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>
