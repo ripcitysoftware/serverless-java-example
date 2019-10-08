@@ -149,7 +149,7 @@ create_apigateway() {
     RESOURCE_ID=$(${ACMD} create-resource \
         --rest-api-id ${API_ID} \
         --parent-id ${PARENT_ID} \
-        --path-part "employees" | jq -r '.id')
+        --path-part "products" | jq -r '.id')
 
     $ACMD put-method \
         --rest-api-id ${API_ID} \
