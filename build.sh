@@ -39,20 +39,7 @@ EOF
 package_code() {
     echo -e "\n\tPackage code!"
 
-    if [ -d $BUILD_DIR ]; then
-       rm -fr $BUILD_DIR/*
-    else
-       mkdir $BUILD_DIR
-    fi
-
-    cp -r serverless_python_example lambda.py $BUILD_DIR
-
-    pipenv lock -r > requirements.txt
-    pip install -r requirements.txt --no-deps -t $BUILD_DIR
-
-    pushd $BUILD_DIR
-    zip -r example.zip *
-    popd
+    gradle clean build
 }
 
 create_lambda() {
